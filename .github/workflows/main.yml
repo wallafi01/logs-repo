@@ -1,0 +1,19 @@
+
+
+name: CI
+
+on:
+
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Adicionando mensagens de log
+        run: |
+           echo "::debug:: Mensagem de Log Debug"
+           echo "::warning:: Mensagem de Log Warning"           
+           echo "::notice:: Mensagem de Log Notice"
+           echo "::error:: Mensagem de Log Error  executado por ${{ github.actor }}"
